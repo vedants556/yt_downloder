@@ -25,7 +25,7 @@ This project is a command-line application that allows users to download YouTube
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/vedants556/youtube_video_downloader
+   git clone https://github.com/vedants556/yt_downloder.git
    ```
 
 2. Install the required dependencies:
