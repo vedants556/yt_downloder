@@ -1,4 +1,3 @@
-
 # 🎥 YouTube Video Downloader
 
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](#)
@@ -13,6 +12,8 @@ This project is a command-line application that allows users to download YouTube
   - Convert videos to MP4 after downloading
 - List available video formats and qualities before downloading
 - User-friendly command-line interface for easy interaction
+- Support for `.netrc` authentication for downloading private or age-restricted videos
+- Debug statements to help troubleshoot issues with the application
 
 ## 🛠️ Technologies Used
 
@@ -34,19 +35,31 @@ This project is a command-line application that allows users to download YouTube
 
 3. Ensure FFmpeg is installed on your system.
 
-4. Run the application:
+4. Create a `.netrc` file in your home directory for authentication (if needed):
+   ```plaintext
+   machine youtube.com
+   login your_username
+   password your_password
+   ```
+   Make sure to set the permissions for the `.netrc` file:
+   ```bash
+   chmod 600 ~/.netrc
+   ```
+
+5. Run the application:
    ```bash
    python main.py
    ```
 
-5. Follow the prompts to download your desired video.
+6. Follow the prompts to download your desired video.
 
 ## 📊 How It Works
 
 1. Users input the YouTube video URL through the command line.
-2. The application fetches available formats and displays them.
-3. Users select the desired format by number.
-4. The chosen video is downloaded and converted to MP4 format.
+2. The application checks for the `.netrc` file and displays relevant debug information.
+3. It fetches available formats and displays them.
+4. Users select the desired format by number.
+5. The chosen video is downloaded and converted to MP4 format.
 
 ## 🤝 Contributing
 
@@ -70,3 +83,5 @@ Vedant
 ---
 
 If you find this project useful, please consider giving it a star ⭐️ to show your support!
+
+---
